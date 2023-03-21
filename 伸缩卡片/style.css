@@ -1,16 +1,11 @@
-@font-face {
-    font-family: "阿里妈妈东方大楷 Regular";font-weight: 400;src: url("//at.alicdn.com/wf/webfont/VmkAF8epsLLD/J6OfgZBzNwNB-A8CklNpf.woff2") format("woff2"),
-    url("//at.alicdn.com/wf/webfont/VmkAF8epsLLD/fCTfMUl-Gjy5hEV-kf1X6.woff") format("woff");
-    font-display: swap;
-  }
-<<<<<<< HEAD
+
 
 *{
     box-sizing: border-box;
 }
 
 body{
-  font-family: 'Courier New', Courier, monospace;
+  font-family: "华文行楷", "STXingkai", "AR PL UKai CN", cursive;
   display: flex;
   align-items: center;
   height: 100vh;
@@ -36,9 +31,28 @@ body{
 }
 
 .pictuer h3{
-  font-size: 24px;
+  font-size: 55px;
   position: absolute;
   bottom: 20px;
   left: 20px;
+  opacity: 0;
 }
 
+.active.pictuer{
+
+  flex: 5;
+}
+
+.active.pictuer h3{
+
+  opacity: 1;
+}
+
+@media (max-width:480px) {
+  .contanier{
+    width: 100vw;
+  }
+  .pictuer:nth-of-type(4),.pictuer:nth-of-type(5){
+    display: none;
+  }
+}
