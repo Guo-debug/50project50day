@@ -8,6 +8,7 @@ body{
   font-family: "华文行楷", "STXingkai", "AR PL UKai CN", cursive;
   display: flex;
   align-items: center;
+  justify-content: center;
   height: 100vh;
   overflow: hidden;
   margin: 0;
@@ -18,19 +19,21 @@ body{
   width: 90vw;
 }
 
-.pictuer{
+.picture{
   height: 80vh;
   flex: 0.5;
-  background-size: cover;
   background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
   border-radius: 50px;
   cursor: pointer;
   color: #fff;
   margin: 10px;
   position: relative;
+  transition: all 1000ms ease-in;
 }
 
-.pictuer h3{
+.picture h3{
   font-size: 55px;
   position: absolute;
   bottom: 20px;
@@ -38,12 +41,12 @@ body{
   opacity: 0;
 }
 
-.active.pictuer{
+.active.picture{
 
   flex: 5;
 }
 
-.active.pictuer h3{
+.active.picture h3{
 
   opacity: 1;
 }
@@ -52,7 +55,7 @@ body{
   .contanier{
     width: 100vw;
   }
-  .pictuer:nth-of-type(4),.pictuer:nth-of-type(5){
+  .picture:nth-of-type(4),.picture:nth-of-type(5){
     display: none;
   }
 }

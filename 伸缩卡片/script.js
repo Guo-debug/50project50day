@@ -1,3 +1,14 @@
-const picture = document.querySelectorAll('.picture')
+const pictures = document.querySelectorAll('.picture')
 
-picture.forEach
+pictures.forEach(picture=>{
+    picture.addEventListener('click',() => {
+                                    removeActiveClasses()
+                                    picture.classList.add('active')
+    })
+})
+
+function removeActiveClasses(){
+    pictures.forEach(picture => {
+        picture.classList.remove('active')
+    })
+}
